@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background,
+body {
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.background-top {
+    height: 200px;
+    background-color: #24c0a6;
+}
+.background-bottom {
+    height: calc(100% - 200px);
+    background-color: rgb(198, 209, 191);
+}
+
+.wrapper {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 90%;
+    z-index: 1;
+}
+
+/* wrapper LEFT */
+.wrapper-left {
+    width: 30%;  
+    min-width: 250px;
+}
+
+.wrapper-left > nav {
+    display: flex;
+    height: 60px;
+}
+
+.my-img {
+    display: flex;
+    width: 20%;
+    background-color: gainsboro;
+}
+
+.my-img > img {
+    width: 70%;
+    margin: auto;
+}
+.my-icon,
+.your-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    background-color: gainsboro;
+}
+
+.my-icon {
+    border-right: 1px solid silver;
+}
+.my-icon > i,
+.your-icon > i {
+    margin-right: 23px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+}
+.notice {
+    display: flex;
+    height: 60px;
+    background-color: rgb(94, 175, 241);
+}
+
+.notice-icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 5px 20px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+}
+.notice-icon > i {
+    margin: auto;
+    color: rgb(94, 175, 241);
+}
+
+.notice-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.notice-text > p {
+    font-size: 11px;
+    margin-top: 4px;
+    text-decoration: underline;
+    color: rgb(68, 68, 68);
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: gainsboro;
+    border-bottom: 1px solid rgb(124, 124, 124, 0.4);
+}
+
+.container-search {   
+    display: flex;
+    align-items: center;
+    width: 95%;
+    padding-left: 20px;
+    border-radius: 20px;
+    border: 0;
+    background-color: white;
+}
+.search input {
+    width: 95%;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 10px;
+    outline: none;
+}
+
+/* account */
+.accounts {
+    height: calc(100% - 170px);
+    overflow-y: scroll;
+}
+.account {
+    display: flex;
+    height: 60px;
+    background-color: white;
+    border-top: 1px solid gainsboro;
+}
+.account:hover {
+    background-color:  rgb(243, 239, 239);
+}
+.account.active {
+    background-color: rgb(224, 223, 223);
+}
+.account-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.account-img > img {
+    width: 70%;
+    margin-left: 20px;
+}
+.account-name {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-name > h5,
+.your-name > h5 {
+    width: 70%;
+    padding-left: 20px;
+    margin-top: 10px;
+} 
+
+.account-name span {
+    width: 30%;
+    margin-top: 10px;
+    padding-left: 40px;
+    font-size: 11px;
+    color: darkgray;
+}
+
+.account-name > p,
+.your-name > p {
+    font-size: 11px;
+    margin-left: 20px;
+    color: darkgray;
+}
+/* wrapper RIGHT */
+.wrapper-right {
+    width: 70%;
+    min-width: 550px;
+}
+
+.wrapper-right > nav {
+    display: flex;
+    height: 60px;
+}
+
+.your-img {
+    display: flex;
+    width: 50%;
+    background-color: gainsboro;
+}
+.your-img > img {
+    width: 15%;
+    margin-left: 20px;
+    padding: 5px;
+}
+.your-name {
+  line-height: 1.6;
+
+}
+.your-icon {
+    width: 50%;
+    background-color: gainsboro;
+}
+
+/* main */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 120px);
+    padding: 30px 70px;
+    overflow-y: auto;
+    background-image: url(../img/tumblr_ouztgbH0CG1vj8v9mo1_1280.png);
+    background-size: cover;
+}
+.main-mess {
+    position: relative;
+    max-width: 50%;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+.main-mess p:first-child {
+    display: inline-block;
+}
+.main-mess i {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: rgb(63, 63, 63);
+}
+.main-mess:hover i{
+    display: block;
+}
+
+.main-mess p:last-child {
+    font-size: 11px;
+    color: grey;
+    text-align: right;
+    line-height: 0;
+}
+.main-mess.green {
+    margin-left: 50%;
+    background-color: rgb(181, 241, 148)   
+}
+
+.main-mess.white {
+    background-color: white;
+}
+
+/* mess */
+.mess {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: gainsboro;
+}
+
+.mess > i {
+    font-size: 20px;
+    margin: 20px;
+    color: rgb(63, 63, 63);
+}
+
+.mess > input {
+    width: 85%;
+    height: 65%;
+    padding-left: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+}
+
+/* template */
+
+.template {
+    display: none;
+
+}
