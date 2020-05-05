@@ -8,14 +8,15 @@
 body {
     width: 100%;
     height: 100vh;
-    z-index: 0;
     font-family: 'Oxygen', sans-serif;
+    z-index: 0;
 }
 
 .background-top {
     height: 200px;
-    background-color: #24c0a6;
+    background-color: rgb(36, 192, 166);
 }
+
 .background-bottom {
     height: calc(100% - 200px);
     background-color: rgb(198, 209, 191);
@@ -31,6 +32,10 @@ body {
     z-index: 1;
 }
 
+ul {
+    list-style: none;
+}
+
 /* wrapper LEFT */
 .wrapper-left {
     width: 30%;  
@@ -42,35 +47,38 @@ body {
     height: 60px;
 }
 
+/* nav */
 .my-img {
     display: flex;
     width: 20%;
-    background-color: gainsboro;
+    background-color: rgb(220, 220, 220);
 }
 
 .my-img > img {
     width: 70%;
     margin: auto;
 }
+
 .my-icon,
 .your-icon {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 80%;
-    background-color: gainsboro;
+    background-color: rgb(220, 220, 220);
 }
-
 .my-icon {
-    border-right: 1px solid silver;
+    border-right: 1px solid rgb(192, 192, 192);
 }
 .my-icon > i,
 .your-icon > i {
     margin-right: 23px;
     font-size: 20px;
+    color: rgb(128, 128, 128);
     cursor: pointer;
-    color: gray;
 }
+
+/* notice */
 .notice {
     display: flex;
     height: 60px;
@@ -85,7 +93,7 @@ body {
     padding: 10px;
     font-size: 20px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
 .notice-icon > i {
@@ -99,15 +107,13 @@ body {
     justify-content: center;
 }
 
-
-.notice-text > p {
+.notice-text > a {
     font-size: 11px;
     margin-top: 4px;
-    text-decoration: underline;
     color: rgb(68, 68, 68);
 }
 
-
+/* search */
 .search {
     display: flex;
     align-items: center;
@@ -124,26 +130,29 @@ body {
     padding-left: 20px;
     border-radius: 20px;
     border: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
+
 .search input {
     width: 95%;
+    padding: 10px 10px;
     border-radius: 20px;
     border: 0;
-    padding: 10px 10px;
     outline: none;
 }
 
 /* account */
 .accounts {
     height: calc(100% - 170px);
+    background-color: rgb(235, 231, 231);
     overflow-y: scroll;
 }
+
 .account {
     display: flex;
     height: 60px;
-    background-color: white;
-    border-top: 1px solid gainsboro;
+    border-top: 1px solid rgb(220, 220, 220);
+    background-color: rgb(255, 255, 255);
 }
 .account:hover {
     background-color:  rgb(243, 239, 239);
@@ -151,6 +160,7 @@ body {
 .account.active {
     background-color: rgb(224, 223, 223);
 }
+
 .account-img {
     display: flex;
     align-items: center;
@@ -162,17 +172,18 @@ body {
     width: 70%;
     margin-left: 20px;
 }
+
 .account-name {
-    width: 80%;
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .account-name > h5,
 .your-name > h5 {
     width: 70%;
-    padding-left: 20px;
     margin-top: 10px;
+    padding-left: 20px;
 } 
 
 .account-name span {
@@ -180,21 +191,23 @@ body {
     margin-top: 10px;
     padding-left: 40px;
     font-size: 11px;
-    color: darkgray;
+    color: rgb(169, 169, 169);
 }
 
 .account-name > p,
 .your-name > p {
-    font-size: 11px;
     margin-left: 20px;
-    color: darkgray;
+    font-size: 11px;
+    color: rgb(169, 169, 169);
 }
+
 /* wrapper RIGHT */
 .wrapper-right {
     width: 70%;
     min-width: 550px;
 }
 
+/* nav */
 .wrapper-right > nav {
     display: flex;
     height: 60px;
@@ -202,43 +215,58 @@ body {
 
 .your-img {
     display: flex;
-    width: 50%;
-    background-color: gainsboro;
+    width: 15%;
+    background-color: rgb(220, 220, 220);
 }
 .your-img > img {
-    width: 15%;
-    margin-left: 20px;
-    padding: 5px;
+    width: 43%;
+    margin: auto;
 }
-.your-name {
-  line-height: 1.6;
 
+.your-name {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    line-height: 1.6;
+    background-color: rgb(220, 220, 220);
 }
 .your-icon {
-    width: 50%;
-    background-color: gainsboro;
+    width: 45%;
+    background-color: rgb(220, 220, 220);
 }
 
 /* main */
-.main {
-    display: flex;
-    flex-direction: column;
+.wrapper-main {
     height: calc(100% - 120px);
-    padding: 30px 70px;
     overflow-y: auto;
+}
+
+.main {
+    display: none;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 30px 70px;
     background-image: url(../img/tumblr_ouztgbH0CG1vj8v9mo1_1280.png);
     background-size: cover;
 }
+
+.main.active {
+    display: flex;
+}
+
 .main-mess {
     position: relative;
+    min-width: 30%;
     max-width: 50%;
-    border-radius: 10px;
-    padding: 10px 15px;
     margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
+
 .main-mess p:first-child {
     display: inline-block;
 }
+
 .main-mess i {
     display: none;
     position: absolute;
@@ -252,19 +280,48 @@ body {
     display: block;
 }
 
-.main-mess p:last-child {
+.mess-time {
     font-size: 11px;
-    color: grey;
     text-align: right;
     line-height: 0;
+    color: rgb(128, 128, 128);
 }
+
 .main-mess.green {
     margin-left: 50%;
     background-color: rgb(181, 241, 148)   
 }
 
 .main-mess.white {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    font-size: 13px;
+    color: rgb(128, 128, 128);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 6px 11px 0px rgba(184,184,184,0.57);
+    border-radius: 5px;    
+    z-index: 1;
+}
+
+.dropdown.active {
+    display: block;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    cursor: default;
+}
+
+
+.dropdown li:hover{
+    background-color: rgb(224, 223, 223);
+    border-radius: 5px;
 }
 
 /* mess */
@@ -272,13 +329,16 @@ body {
     display: flex;
     align-items: center;
     height: 60px;
-    background-color: gainsboro;
+    background-color: rgb(220, 220, 220);
 }
 
 .mess > i {
-    font-size: 20px;
     margin: 20px;
+    font-size: 20px;
     color: rgb(63, 63, 63);
+}
+.mess > i:hover {
+    cursor: pointer;
 }
 
 .mess > input {
@@ -286,13 +346,23 @@ body {
     height: 65%;
     padding-left: 20px;
     border: 0;
-    outline: none;
     border-radius: 20px;
+    outline: none;
+}
+
+.mess i.icon-none {
+    display: none;
+}
+
+.mess i.icon-active {
+   display: block;
 }
 
 /* template */
 
 .template {
     display: none;
-
 }
+
+
+
